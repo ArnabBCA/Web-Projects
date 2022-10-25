@@ -33,7 +33,7 @@
     margin: 0 auto;
 
   }
-.screen:hover, .screen:active{
+/*.screen:hover, .screen:active{
     -ms-transform: scale(1.5); 
     -webkit-transform: scale(1.5); 
     transform: scale(1.5);
@@ -42,7 +42,7 @@
     height: 70px;
     width: 145px;
     position: absolute;
-}
+}*/
 
 
 .screen:active{
