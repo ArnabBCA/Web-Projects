@@ -1,0 +1,49 @@
+.iphone{
+    margin: auto;
+    background-image: linear-gradient(rgb(152, 208, 230), rgb(0, 162, 255));
+    color: white;
+    outline: 2px solid rgb(111, 53, 145);
+    border: 6px solid rgb(0, 0, 0);
+    height: 450px;
+    width: 210px;
+    margin-top: 80px;
+    padding: 10px;
+    border-radius: 30px;
+}
+.screen{
+    margin: auto;
+    background-color: black;
+    height: 20px;
+    width: 70px;
+    border-radius: 15px;
+}
+.container {
+    position: absolute;
+}  
+.icons{
+    padding-left:160px;
+}
+.iconcolour{
+    filter: invert(1);
+}
+.screen {
+    background-color: rgb(0, 0, 0);
+    transition: transform.3s;
+    margin: 0 auto;
+  }
+.screen:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+    margin-top: 13px;
+    margin-left:32px;
+    height: 70px;
+    width: 145px;
+    position: absolute;
+}
+#clock {
+    font-size: 3em;
+    padding-top: 20px;
+    padding-left:45px;
+    font-family: 'Work Sans', sans-serif;
+}
