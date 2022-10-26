@@ -37,10 +37,38 @@ function checkTime(i) {
                 <img src="Icons/battery-half.svg" width="13px" heighjt="auto" class="iconcolour">
             </div>
         </div>
-        <div class="screen"></div>
+        <div id="notch">
+            <div class="screen" tabindex="1"></div>
+        </div>
         <div id="clock"></div>
         <div id="circle"></div>
+            <div Id="message" style="visibility:hidden">
+                <p>Made By @Arnab Ghosh</p>
+            </div>
+            <div Id="insta" style="visibility:hidden">
+                <p>Follow On Instagram</p>
+            </div>
     </div>
-    </div>
+<script>
+    function showdiv()
+    {
+        document.getElementById("message").style.visibility="visible";
+    }
+    setTimeout("showdiv()",10000)
+    function insta()
+    {
+        document.getElementById("insta").style.visibility="visible";
+    }
+    setTimeout("insta()",20000)
+    /*function hidediv()
+    {
+        document.getElementById("message").style.visibility="hidden";
+    }
+    setTimeout("hidediv()",20000)
+    */
+</script>
+
+    
 </body>
 </html>
+        
