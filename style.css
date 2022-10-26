@@ -39,9 +39,9 @@
     filter: invert(1);
 }
 #clock {
+    padding-top: 30px;
+    text-align: center;
     font-size: 3em;
-    padding-top: 20px;
-    padding-left:44px;
     font-family: 'Work Sans', sans-serif;
 }
 #circle {
@@ -50,7 +50,7 @@
     background: none;
     border-radius: 50%;
     animation: circle 30s linear infinite alternate;
-  }
+}
 
 @keyframes circle{
     0%{
@@ -62,9 +62,10 @@
 }
 #message{
     background-color: rgba(255, 255, 255, 0.534);
-    height: 40px;
+    height: 43px;
     width: 210px;
     border-radius: 10px;
+    transition: transform.2s;
     animation: mymove 3s ;
     animation-delay: 10s;
     display: grid;
@@ -75,6 +76,12 @@
     font-size: 15px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
+#message:active{
+    transform: scale(.8);
+}
+#insta:active{
+    transform: scale(.8);
+}
 @keyframes mymove {
     from{
         transform: translateY(-100%);
@@ -83,15 +90,15 @@
     to {
         transform: translateY(0%);
         opacity: 100%;
-    }
-    
+    }  
 }
 #insta{
     margin-top: 5px;
     background-color: rgba(255, 255, 255, 0.534);
-    height: 40px;
+    height: 43px;
     width: 210px;
     border-radius: 10px;
+    transition: transform.2s;
     animation: insta 2s ;
     animation-delay: 20s;
     display: grid;
@@ -101,6 +108,7 @@
     font-family: 'Work Sans', sans-serif;
     font-size: 15px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    position:absolute;
 }
 @keyframes insta {
     from{
@@ -108,10 +116,29 @@
     }
     to {
         opacity: 100%;
-    }
-    
+    }    
 }
-
+p1{
+    margin: 0;
+    padding-bottom: 2px;
+    text-align: left;
+    font-size: 12px;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+.bar
+{
+    margin-left: 70px;
+    margin-top: 274px;
+    height: 3px;
+    width: 70px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.473);   
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
   
 
 
