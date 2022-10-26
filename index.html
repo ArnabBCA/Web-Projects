@@ -32,14 +32,12 @@ function checkTime(i) {
     <div class="iphone">
         <div class="container">
             <div class="icons">
-                <img src="Icons/reception-4.svg" width="13px" heighjt="auto" class="iconcolour">
+                <img src="Icons/reception-4.svg" width="13px" height="auto" class="iconcolour">
                 <img src="Icons/wifi.svg" width="13px" heighjt="auto" class="iconcolour">
                 <img src="Icons/battery-half.svg" width="13px" heighjt="auto" class="iconcolour">
             </div>
         </div>
-        <div id="notch">
-            <div class="screen" tabindex="1"></div>
-        </div>
+        <div class="screen" tabindex="-1"></div>
         <div id="clock"></div>
         <div id="circle"></div>
         <div Id="message" style="visibility:hidden">
@@ -51,6 +49,12 @@ function checkTime(i) {
             <p>Follow Me On Instagram</p>
         </div>
         <div class="bar"></div>
+        <div class="flash" tabindex="-1">
+            <img src="Icons/flashlight.svg" width="30px" height="30px">
+        </div>
+        <div class="camera" tabindex="-1">
+            <img src="Icons/camera-fill.svg" width="30px" height="30px">
+        </div>
     </div>
 <script>
     function showdiv()
@@ -69,6 +73,7 @@ function checkTime(i) {
     }
     setTimeout("hidediv()",20000)
     */
+
 </script>    
 </body>
 </html>

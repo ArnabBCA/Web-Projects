@@ -130,7 +130,7 @@ p{
 }
 .bar
 {
-    margin-left: 70px;
+    margin-left: 67px;
     margin-top: 274px;
     height: 3px;
     width: 70px;
@@ -139,6 +139,25 @@ p{
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
+.flash{
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 10px;
+    opacity: 60%;
+}
+.flash:focus{
+    filter: invert(1);
+}
+.camera:focus{
+    filter: invert(1);
+}
+.camera{
+    position: absolute;
+    opacity: 60%;
+    margin-top: 220px;
+    margin-left: 170px;
+}
+
   
 
 
