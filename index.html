@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body onload="startTime()">
+<body id="body" onload="startTime()">
 <script>
 function startTime() {
     const today = new Date();
@@ -30,14 +30,16 @@ function checkTime(i) {
 }
 </script>
     <div class="iphone">
-        <div class="container">
-            <div class="icons">
-                <img src="Icons/reception-4.svg" width="13px" height="auto" class="iconcolour">
-                <img src="Icons/wifi.svg" width="13px" heighjt="auto" class="iconcolour">
-                <img src="Icons/battery-half.svg" width="13px" heighjt="auto" class="iconcolour">
+        <div class="icons">
+            <img src="Icons/reception-4.svg" width="13px" height="auto" class="iconcolour">
+            <img src="Icons/wifi.svg" width="13px" heighjt="auto" class="iconcolour">
+            <img src="Icons/battery-half.svg" width="13px" heighjt="auto" class="iconcolour">
+        </div>
+        <div id="screen" class="screen" tabindex="-1">
+            <div class="ico">
+                <img src="Icons/Lovely Poster.jpg" id="poster" class="poster" width="15px" height="auto">
             </div>
         </div>
-        <div class="screen" tabindex="-1"></div>
         <div id="clock"></div>
         <div id="circle"></div>
         <div Id="message" style="visibility:hidden">
@@ -49,13 +51,14 @@ function checkTime(i) {
             <p>Follow Me On Instagram</p>
         </div>
         <div class="bar"></div>
-        <div class="flash" tabindex="-1">
+        <div id="flash" class="flash" tabindex="-1">
             <img src="Icons/flashlight.svg" width="30px" height="30px">
         </div>
-        <div class="camera" tabindex="-1">
+        <div id="camera" class="camera" tabindex="-1">
             <img src="Icons/camera-fill.svg" width="30px" height="30px">
         </div>
     </div>
+        
 <script>
     function showdiv()
     {
@@ -67,12 +70,55 @@ function checkTime(i) {
         document.getElementById("insta").style.visibility="visible";
     }
     setTimeout("insta()",20000)
-    /*function hidediv()
-    {
-        document.getElementById("message").style.visibility="hidden";
-    }
-    setTimeout("hidediv()",20000)
-    */
+
+
+
+    const show=document.querySelector('.screen');
+    const micon=document.querySelector('.ico');
+    show.addEventListener('click',() =>{
+        micon.style.display='block';
+    });
+
+
+    window.addEventListener('click', function(e){
+        if (document.getElementById('screen').contains(e.target)){
+            document.getElementById("poster").style.transform='scale(2.3)';
+            document.getElementById("poster").style.left='13px';
+            document.getElementById("poster").style.top='12px';
+  	    } 
+        else{
+            document.getElementById("poster").style.transform='scale(1)';
+            document.getElementById("poster").style.left='1px';
+            document.getElementById("poster").style.top='0px';
+  	    }
+    })
+
+
+
+    const flashinvert=document.querySelector('.flash');
+    const flash=document.querySelector('.flash');
+    flashinvert.addEventListener('click',() =>{
+        if(flash.style.filter==='invert(0)')
+        {
+            flash.style.filter='invert(1)';
+        }
+        else
+        {
+            flash.style.filter='invert(0)';
+        }
+    });
+    const camerainvert=document.querySelector('.camera');
+    const camera=document.querySelector('.camera');
+    camerainvert.addEventListener('click',() =>{
+        if(camera.style.filter==='invert(0)')
+        {
+            camera.style.filter='invert(1)';
+        }
+        else
+        {
+            camera.style.filter='invert(0)';
+        }
+    });
 
 </script>    
 </body>
