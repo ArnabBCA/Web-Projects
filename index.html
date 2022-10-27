@@ -31,16 +31,13 @@ function checkTime(i) {
 }
 </script>
     <div class="iphone">
-        <div class="icons">
-            <img src="Icons/reception-4.svg" width="13px" height="auto" class="iconcolour">
-            <img src="Icons/wifi.svg" width="13px" heighjt="auto" class="iconcolour">
-            <img src="Icons/battery-half.svg" width="13px" heighjt="auto" class="iconcolour">
-        </div>
-        <div id="screen" class="screen" tabindex="-1">
-            <div class="ico">
-                <img src="Icons/Lovely Poster.jpg" id="poster" class="poster" width="15px" height="auto">
+        <div class="musicbox">
+            <div id="trans" class="trans" tabindex="-1">
+                    <img src="Icons/Lovely Poster.jpg" id="poster" class="poster" width="15px" height="15px">
             </div>
         </div>
+
+        <img src="Icons/Untitled (1).svg" class="buttons" height="10px">
         <div id="clock"></div>
         <div id="circle"></div>
         <div Id="message" style="visibility:hidden">
@@ -59,6 +56,7 @@ function checkTime(i) {
             <img src="Icons/camera-fill.svg" width="30px" height="30px">
         </div>
     </div>
+</div>
         
 <script>
     function showdiv()
@@ -74,18 +72,24 @@ function checkTime(i) {
 
 
 
+    const show=document.querySelector('.trans');
+    const micon=document.querySelector('.poster');
+    show.addEventListener('click',() =>{
+        micon.style.display='block';
+    });
 
 
     window.addEventListener('click', function(e){
-        if (document.getElementById('screen').contains(e.target)){
-            document.getElementById("poster").style.transform='scale(2.3)';
-            document.getElementById("poster").style.left='13px';
-            document.getElementById("poster").style.top='12px';
+        if (document.getElementById('trans').contains(e.target)){
+            document.getElementById("poster").style.transform='scale(3)';
+            document.getElementById("poster").style.bottom='80px';
+            document.getElementById("poster").style.left='30px';
   	    } 
         else{
             document.getElementById("poster").style.transform='scale(1)';
-            document.getElementById("poster").style.left='1px';
-            document.getElementById("poster").style.top='0px';
+            document.getElementById("poster").style.bottom='103px';
+            document.getElementById("poster").style.left='72px';
+
   	    }
     })
 
@@ -115,12 +119,6 @@ function checkTime(i) {
             camera.style.filter='invert(0)';
         }
     });
-    const xxx=document.querySelector('.ico');
-    $(document).on( 'click', '.screen', function () { 
-xxx.style.display='block';
-
-});
-
 </script>    
 </body>
 </html>
