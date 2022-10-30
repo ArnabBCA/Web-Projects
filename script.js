@@ -61,31 +61,22 @@ setTimeout("insta()",20000)
 function clear()
 {
     document.getElementById("clear").style.visibility="visible";
+    
 }
 setTimeout("clear()",20000)
 
 function messageclear()
 {
     document.getElementById("message").style.transform='translate(110%)'
-    document.getElementById("message").style.transition='transform 1s';
-    document.getElementById("message").style.transitionDelay='.3s';
+    document.getElementById("message").style.transition='transform 1.5s';
+    document.getElementById("message").style.transitionDelay='.4s';
 
     document.getElementById("instagram").style.transform='translate(110%)'
-    document.getElementById("instagram").style.transition='transform 1s';
+    document.getElementById("instagram").style.transition='transform 1.5s';
     document.getElementById("instagram").style.transitionDelay='.2s';
 
     document.getElementById("clear").style.transform='translate(300px)'
-    document.getElementById("clear").style.transition='transform 1s';
-}
-function autodelete()
-{
-    setTimeout(delay, 2000);
-}
-function delay()
-{
-    setTimeout(document.getElementById("message").style.display='none');
-    setTimeout(document.getElementById("instagram").style.display='none');
-    setTimeout(document.getElementById("clear").style.display='none');
+    document.getElementById("clear").style.transition='transform 1.5s';
 }
 
 

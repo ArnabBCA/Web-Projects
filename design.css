@@ -1,5 +1,6 @@
 #screen
 {
+    overflow: hidden;
     position: relative;
     margin: auto;
     background-image: linear-gradient(rgb(182, 142, 228), rgb(132, 37, 196));
@@ -28,7 +29,18 @@
         box-shadow: rgba(255,255,255,0.1) 70px 10px,rgba(255,255,255,0.1) 300px 205px 0 12px,rgba(255,255,255,0.1) 0px 155px 0 23px,rgba(255,255,255,0.1) 330px 45px 0 -8px,rgba(255,255,255,0.1) 460px 325px,rgba(255,255,255,0.1) 0px 445px 0 12px,rgba(255,255,255,0.1) 300px 145px 0 23px,rgba(255,255,255,0.1) 100px 85px 0 -8px,rgba(255,255,255,0.1) 50px 155px,rgba(255,255,255,0.1) 150px 273px 0 -2px,rgba(255,255,255,0.1) 0px 555px 0 23px,rgba(255,255,255,0.1) 180px 5px 0 -8px,rgba(255,255,255,0.1) 300px 555px 0 -8px,rgba(255,255,255,0.1) 350px 355px 0 10px;
     }
 }
-
+#airtel
+{
+    left: 7%;
+    top: 10px;
+    position: absolute;
+    font-family: 'Work Sans', sans-serif;
+    filter: invert(1);
+    font-size: 5px;
+}
+i4{
+    font-size: 5px;
+}
 #top-icons
 {
     position: absolute;
@@ -64,11 +76,11 @@
     transform: translate(-50%);
     border-radius: 4px;
     opacity: 70%;
-    transition: transform.3s;
+    transition: transform.2s;
     transition-property: width,height;
 }
 
-#bar-icon:hover
+#bar-icon:active
 {
     width: 70px;
 }
@@ -113,12 +125,14 @@
     font-family: 'Work Sans', sans-serif;
     font-size: 15px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    
 }
 
 #message:active
 {
     transform: scale(.8);
 }
+
 
 #instagram:active
 {
