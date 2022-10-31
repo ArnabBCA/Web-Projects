@@ -105,6 +105,7 @@ i4{
     font-size: 1rem;
     position: absolute;
     filter: invert(1);
+    white-space: nowrap;
 }
 
 #message
@@ -248,4 +249,35 @@ p
 #play:active
 {
     transform: scale(.8);
+}
+#duration
+{
+    visibility: hidden;
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    translate: -50%;
+    height: 5px;
+    width: 200px;
+    background-color: rgb(24, 24, 24);
+    border-radius: 5px;
+}
+#progress
+{
+    visibility: hidden;
+    height: 5px;
+    width: 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+#musiclength
+{
+    visibility: hidden;
+    position: absolute;
+    left: 86%;
+    top: 54%;
+    font-size: 12px;
+    filter:invert(1);
+    opacity: 50%;
+    font-family: 'Work Sans', sans-serif;
 }

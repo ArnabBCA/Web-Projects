@@ -6,7 +6,7 @@ function startTime()
     let s = today.getSeconds();
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('clock').innerHTML =  h + ":" + m;
+    document.getElementById('clock').innerHTML =h+":"+m;
     setTimeout(startTime, 1000);
 }
 function checkTime(i) 
@@ -43,13 +43,11 @@ function myDate()
     days[5] = "Saturday";
     
     var m = month[a.getMonth()];
-    var d=(a.getUTCDate()+1);
+    var d=(a.getDate());
     var day = days[a.getDay()];
+    document.getElementById("month").innerHTML=day+", "+m+" "+d;
 
-    document.getElementById("month").innerHTML = day+", "+m+" "+d;
 }
-
-
 
 function showdiv()
 {
@@ -98,31 +96,53 @@ window.addEventListener("click", function(e)
         document.getElementById("poster").style.borderRadius='25px';
         document.getElementById("poster").style.left='3%';
         document.getElementById("poster").style.top='6%';
+
+        document.getElementById("duration").style.visibility='visible';
+        document.getElementById("progress").style.visibility='visible';
         
         document.getElementById("play").style.visibility='visible';
-        document.getElementById("play").style.top='60%';
+        document.getElementById("play").style.top='65%';
         document.getElementById("play").style.height='50px';
+
+        document.getElementById("musiclength").style.visibility='visible';
     }
     else
     {
         document.getElementById("play").style.visibility='hidden';
         document.getElementById("poster").style.visibility='hidden';
+        document.getElementById("duration").style.visibility='hidden';
+        document.getElementById("progress").style.visibility='hidden';
+        document.getElementById("musiclength").style.visibility='hidden';
         musicstatus();
     }
 });
 
 var musicon=0;
+
+var length=0;
+
 function play()
 {
     let displayImage = document.getElementById('play');
     if(displayImage.src.match('Icons/play-fill.svg'))
     {
         displayImage.src='Icons/pause-fill.svg';
+        document.getElementById('music').play();
+        
+        music.ontimeupdate=function(e)
+        {
+            var length = document.getElementById("music").duration;
+            document.getElementById("musiclength").innerHTML =(Math.floor(length)/60).toFixed(2);
+            var progress=document.getElementById('progress');
+            progress.style.width=Math.floor(music.currentTime*100/music.duration)+"%";
+            
+        }
         musicon=1;
     }
     else
     {
         displayImage.src='Icons/play-fill.svg';
+        document.getElementById("music").pause();
         musicon=0;
     }
 }
@@ -172,3 +192,35 @@ function invertcamera()
         y.style.filter = "invert(0)";
     }
 }
+
+
+/*var audio, playbtn, seekslider,seeking=false,seekto;
+function initAudioPlayer(){
+	audio = new Audio();
+	audio.src = "/Music/[YT2mp3.info] - NEFFEX - Grateful [Copyright Free] No.54 (320kbps).mp3";
+	audio.loop = true;
+	audio.play();
+	// Set object references
+	playbtn = document.getElementById("playpausebtn");
+	seekslider = document.getElementById("seekslider");
+	// Add Event Handling
+	playbtn.addEventListener("click",playPause);
+	seekslider.addEventListener("mousedown", function(event){ seeking=true; seek(event); });
+	seekslider.addEventListener("mousemove", function(event){ seek(event); });
+	seekslider.addEventListener("mouseup",function(){ seeking=false; });
+	// Functions
+	function playPause(){
+		if(audio.paused){
+		    audio.play();
+	    } else {
+		    audio.pause();
+	    }
+	}
+	function seek(event){
+	    if(seeking){
+		    seekslider.value = event.clientX - seekslider.offsetLeft;
+	        seekto = audio.duration * (seekslider.value / 100);
+	        audio.currentTime = seekto;
+	    }
+    }
+}*/
