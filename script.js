@@ -1,4 +1,5 @@
-function startTime() {
+function startTime() 
+{
     const today = new Date();
     let h = today.getHours();
     let m = today.getMinutes();
@@ -8,12 +9,14 @@ function startTime() {
     document.getElementById('clock').innerHTML =  h + ":" + m;
     setTimeout(startTime, 1000);
 }
-function checkTime(i) {
+function checkTime(i) 
+{
   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
   return i;
 }
 
-function myDate() {
+function myDate() 
+{
     var a = new Date();
     var month = new Array();
     var days = new Array();
@@ -98,17 +101,52 @@ window.addEventListener("click", function(e)
         
         document.getElementById("play").style.visibility='visible';
         document.getElementById("play").style.top='60%';
-        document.getElementById("play").style.height='35px';
-        document.getElementById("play").style.width='35px';
+        document.getElementById("play").style.height='50px';
     }
     else
     {
-        document.getElementById("dynamic").style.height='30px';
-        document.getElementById("dynamic").style.width='100px';
-        document.getElementById("poster").style.visibility='hidden';
         document.getElementById("play").style.visibility='hidden';
+        document.getElementById("poster").style.visibility='hidden';
+        musicstatus();
     }
 });
+
+var musicon=0;
+function play()
+{
+    let displayImage = document.getElementById('play');
+    if(displayImage.src.match('Icons/play-fill.svg'))
+    {
+        displayImage.src='Icons/pause-fill.svg';
+        musicon=1;
+    }
+    else
+    {
+        displayImage.src='Icons/play-fill.svg';
+        musicon=0;
+    }
+}
+
+function musicstatus()
+{
+    if(musicon==1)
+    {
+        document.getElementById("dynamic").style.height='30px';
+        document.getElementById("dynamic").style.width='170px';
+
+
+        document.getElementById("poster").style.visibility='visible';
+        document.getElementById("poster").style.height='25px';
+        document.getElementById("poster").style.width='25px';
+        document.getElementById("poster").style.borderRadius='10px';
+        document.getElementById("poster").style.top='7%';
+    }
+    else if(musicon==0)
+    {
+        document.getElementById("dynamic").style.height='30px';
+        document.getElementById("dynamic").style.width='100px';
+    }
+}
 
 function invertflash() 
 {
