@@ -238,6 +238,7 @@ p
 }
 #play
 {
+    transition: transform.2s;
     left: 50%;
     translate:-50%;
     visibility: hidden;
