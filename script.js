@@ -207,6 +207,7 @@ function invertcamera()
 function buttontest()
 {
     music.play();
+    music.muted=false;
 }
 
 
