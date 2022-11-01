@@ -91,6 +91,7 @@ window.addEventListener("click", function(e)
         document.getElementById("dynamic").style.boxShadow='rgba(0, 0, 0, 0.4) 0px 30px 90px';
 
         document.getElementById("poster").style.visibility='visible';
+        document.getElementById("poster").style.opacity='1';
         document.getElementById("poster").style.height='75px';
         document.getElementById("poster").style.width='75px';
         document.getElementById("poster").style.borderRadius='25px';
@@ -98,9 +99,12 @@ window.addEventListener("click", function(e)
         document.getElementById("poster").style.top='6%';
 
         document.getElementById("duration").style.visibility='visible';
+        document.getElementById("duration").style.opacity='1';
         document.getElementById("progress").style.visibility='visible';
+        document.getElementById("progress").style.opacity='1';
         
         document.getElementById("play").style.visibility='visible';
+        document.getElementById("play").style.opacity='1';
         document.getElementById("play").style.top='65%';
         document.getElementById("play").style.height='50px';
 
@@ -109,9 +113,15 @@ window.addEventListener("click", function(e)
     else
     {
         document.getElementById("play").style.visibility='hidden';
+        document.getElementById("play").style.opacity='0';
         document.getElementById("poster").style.visibility='hidden';
+        document.getElementById("poster").style.height='25px';
+        document.getElementById("poster").style.width='25px';
+        document.getElementById("poster").style.opacity='0';
         document.getElementById("duration").style.visibility='hidden';
+        document.getElementById("duration").style.opacity='0';
         document.getElementById("progress").style.visibility='hidden';
+        document.getElementById("progress").style.opacity='0';
         document.getElementById("musiclength").style.visibility='hidden';
         musicstatus();
     }
@@ -158,8 +168,10 @@ function musicstatus()
         document.getElementById("poster").style.visibility='visible';
         document.getElementById("poster").style.height='25px';
         document.getElementById("poster").style.width='25px';
+        document.getElementById("poster").style.opacity='1';
         document.getElementById("poster").style.borderRadius='10px';
         document.getElementById("poster").style.top='7%';
+        
     }
     else if(musicon==0)
     {
@@ -191,6 +203,10 @@ function invertcamera()
     {
         y.style.filter = "invert(0)";
     }
+}
+function buttontest()
+{
+    music.play();
 }
 
 
