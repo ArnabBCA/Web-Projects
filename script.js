@@ -236,13 +236,13 @@ function initAudioPlayer(){
 	    }
     }
 }*/
-
-window.onload = function() {
-    var audioContext = new AudioContext();
-    var audioElement = document.getElementById('music');
-}
-
-function workpls()
-{
-    music.play();
-}
+(function($, window, document, undefined) {
+    var isTouch = 'ontouchstart' in window,
+        eStart = isTouch ? 'touchstart' : 'mousedown',
+        eMove = isTouch ? 'touchmove' : 'mousemove',
+        eEnd = isTouch ? 'touchend' : 'mouseup',
+        eCancel = isTouch ? 'touchcancel' : 'mouseup',
+        canPlayType = function(file) {
+            var audioElement = document.createElement('audio');
+        };
+});

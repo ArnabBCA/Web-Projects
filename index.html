@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
@@ -30,7 +31,7 @@
         <div id="month"></div>
         <div id="clock"></div>
         <div id="dynamic" class="dynamic" tabindex="-1">
-            <audio src="/Music/[YT2mp3.info] - NEFFEX - Grateful [Copyright Free] No.54 (320kbps).mp3" id="music" loop="loop"></audio>
+            <audio src="/Music/[YT2mp3.info] - NEFFEX - Grateful [Copyright Free] No.54 (320kbps).mp3" id="music" loop="loop" preload="auto"></audio>
             <div id="duration">
                 <div id="progress"></div>
             </div>
@@ -51,11 +52,12 @@
         <div Id="clear" onclick="messageclear()">
             <p3>Clear</p3>
         </div>
-    </div> 
-    <button id="button" onclick="workpls()">
-        <span>Play***Pause</span>
-    </button>
-
+    </div>
+    <div id="wrapper">
+		<audio preload="auto" controls>
+			<source src="Music/[YT2mp3.info] - NEFFEX - Grateful [Copyright Free] No.54 (320kbps).mp3">
+		</audio>
+	</div> 
     
 </body>
 </html>
