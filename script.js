@@ -204,11 +204,6 @@ function invertcamera()
         y.style.filter = "invert(0)";
     }
 }
-function buttontest()
-{
-    music.play();
-    music.muted=false;
-}
 
 
 /*var audio, playbtn, seekslider,seeking=false,seekto;
@@ -241,3 +236,10 @@ function initAudioPlayer(){
 	    }
     }
 }*/
+
+function pleasework()
+{
+    const context = new AudioContext();
+    const music = document.getElementById('music')
+    music.play();
+}

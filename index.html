@@ -30,7 +30,7 @@
         <div id="month"></div>
         <div id="clock"></div>
         <div id="dynamic" class="dynamic" tabindex="-1">
-            
+            <audio src="/Music/[YT2mp3.info] - NEFFEX - Grateful [Copyright Free] No.54 (320kbps).mp3" id="music" loop="loop"></audio>
             <div id="duration">
                 <div id="progress"></div>
             </div>
@@ -51,8 +51,11 @@
         <div Id="clear" onclick="messageclear()">
             <p3>Clear</p3>
         </div>
-    </div>  
-    <audio src="/Music/[YT2mp3.info] - NEFFEX - Grateful [Copyright Free] No.54 (320kbps).mp3" id="music" loop="loop" controls="true"></audio>
+    </div> 
+    <button data-playing="false" role="switch" aria-checked="false" onclick="pleasework()">
+        <span>Play///Pause</span>
+    </button>
+
     
 </body>
 </html>
