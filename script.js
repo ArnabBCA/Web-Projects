@@ -237,9 +237,12 @@ function initAudioPlayer(){
     }
 }*/
 
-function pleasework()
+window.onload = function() {
+    var audioContext = new AudioContext();
+    var audioElement = document.getElementById('music');
+}
+
+function workpls()
 {
-    const context = new AudioContext();
-    const music = document.getElementById('music')
     music.play();
 }
