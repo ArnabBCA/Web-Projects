@@ -244,5 +244,6 @@ function initAudioPlayer(){
         eCancel = isTouch ? 'touchcancel' : 'mouseup',
         canPlayType = function(file) {
             var audioElement = document.createElement('audio');
+            var audioElement = document.createElement('music');
         };
 });
