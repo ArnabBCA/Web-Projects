@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,11 +38,20 @@
             <div id="duration">
                 <div id="progress"></div>
             </div>
+            <script>
+                duration.onclick=function(e)
+                {
+                    music.currentTime=((e.offsetX/200)*music.duration);
+                }
+            </script>
+            <div id="musicstart"></div>
             <div id="musiclength"></div>
-            <!--<button id="playpausebtn"></button>
-            <input id="seekslider" type="range" min="0" max="100" value="0">-->
             <img src="Icons/Grateful.jpeg" id="poster" class= "poster" height="16px" width="16px">
+            <h1 id="title">GRATEFUL</h1>
+            <h4 id="artist">Neffex</h4>
             <img src="Icons/play-fill.svg" id="play"  onclick="play()"height="16px">
+            <img src="Icons/rewind-fill.svg" id="previous" height="16px">
+            <img src="Icons/fast-forward-fill.svg" id="next" height="16px">
         </div>
         <div Id="message">
             <p1>Messages</p1>
@@ -55,6 +65,7 @@
             <p3>Clear</p3>
         </div>
     </div>
+
     
 </body>
 </html>

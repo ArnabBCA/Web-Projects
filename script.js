@@ -98,31 +98,77 @@ window.addEventListener("click", function(e)
         document.getElementById("poster").style.left='3%';
         document.getElementById("poster").style.top='6%';
 
+        document.getElementById("title").style.visibility='visible';
+        document.getElementById("title").style.opacity='1';
+        document.getElementById("title").style.left='30%';
+        document.getElementById("title").style.top='16%';
+
+        document.getElementById("artist").style.visibility='visible';
+        document.getElementById("artist").style.opacity='60%';
+        document.getElementById("artist").style.left='30%';
+        document.getElementById("artist").style.top='30%';
+
         document.getElementById("duration").style.visibility='visible';
         document.getElementById("duration").style.opacity='1';
+        document.getElementById("duration").style.width='200px';
         document.getElementById("progress").style.visibility='visible';
         document.getElementById("progress").style.opacity='1';
         
         document.getElementById("play").style.visibility='visible';
         document.getElementById("play").style.opacity='1';
-        document.getElementById("play").style.top='65%';
-        document.getElementById("play").style.height='50px';
+        document.getElementById("play").style.top='66%';
+        document.getElementById("play").style.height='45px';
+
+        document.getElementById("previous").style.visibility='visible';
+        document.getElementById("previous").style.opacity='1';
+        document.getElementById("previous").style.top='70%';
+        document.getElementById("previous").style.height='30px';
+
+        document.getElementById("next").style.visibility='visible';
+        document.getElementById("next").style.opacity='1';
+        document.getElementById("next").style.top='70%';
+        document.getElementById("next").style.height='30px';
 
         document.getElementById("musiclength").style.visibility='visible';
+        document.getElementById("musiclength").style.opacity='60%';
+
+        document.getElementById("musicstart").style.visibility='visible';
+        document.getElementById("musicstart").style.opacity='60%';
     }
     else
     {
         document.getElementById("play").style.visibility='hidden';
         document.getElementById("play").style.opacity='0';
+
+        document.getElementById("previous").style.visibility='hidden';
+        document.getElementById("previous").style.opacity='0';
+
+        document.getElementById("next").style.visibility='hidden';
+        document.getElementById("next").style.opacity='0';
+
         document.getElementById("poster").style.visibility='hidden';
         document.getElementById("poster").style.height='25px';
         document.getElementById("poster").style.width='25px';
         document.getElementById("poster").style.opacity='0';
+
+        document.getElementById("title").style.visibility='hidden';
+        document.getElementById("title").style.opacity='0';
+
+        document.getElementById("artist").style.visibility='visible';
+        document.getElementById("artist").style.opacity='0%';
+
         document.getElementById("duration").style.visibility='hidden';
         document.getElementById("duration").style.opacity='0';
+        document.getElementById("duration").style.width='200px';
+
         document.getElementById("progress").style.visibility='hidden';
         document.getElementById("progress").style.opacity='0';
+
         document.getElementById("musiclength").style.visibility='hidden';
+        document.getElementById("musiclength").style.opacity='0';
+
+        document.getElementById("musicstart").style.visibility='hidden';
+        document.getElementById("musicstart").style.opacity='0';
         musicstatus();
     }
 });
@@ -143,6 +189,18 @@ function play()
         {
             var length = document.getElementById("music").duration;
             document.getElementById("musiclength").innerHTML =(Math.floor(length)/60).toFixed(2);
+            if(music.currentTime==music.duration)
+            {
+                displayImage.src='Icons/play-fill.svg';
+            }
+
+            var s = parseInt(music.currentTime % 60);
+            if (s < 10) s = '0' + s;
+            var m = parseInt((music.currentTime / 60) % 60);
+            document.getElementById("musicstart").innerHTML = (m+":"+s);
+            
+
+
             var progress=document.getElementById('progress');
             progress.style.width=Math.floor(music.currentTime*100/music.duration)+"%";
             
@@ -156,6 +214,8 @@ function play()
         musicon=0;
     }
 }
+
+
 
 function musicstatus()
 {
@@ -171,12 +231,16 @@ function musicstatus()
         document.getElementById("poster").style.opacity='1';
         document.getElementById("poster").style.borderRadius='10px';
         document.getElementById("poster").style.top='7%';
+
+        document.getElementById("duration").style.width='30px';
         
     }
     else if(musicon==0)
     {
         document.getElementById("dynamic").style.height='30px';
         document.getElementById("dynamic").style.width='100px';
+        document.getElementById("duration").style.width='30px';
+
     }
 }
 
@@ -205,37 +269,6 @@ function invertcamera()
     }
 }
 
-
-/*var audio, playbtn, seekslider,seeking=false,seekto;
-function initAudioPlayer(){
-	audio = new Audio();
-	audio.src = "/Music/[YT2mp3.info] - NEFFEX - Grateful [Copyright Free] No.54 (320kbps).mp3";
-	audio.loop = true;
-	audio.play();
-	// Set object references
-	playbtn = document.getElementById("playpausebtn");
-	seekslider = document.getElementById("seekslider");
-	// Add Event Handling
-	playbtn.addEventListener("click",playPause);
-	seekslider.addEventListener("mousedown", function(event){ seeking=true; seek(event); });
-	seekslider.addEventListener("mousemove", function(event){ seek(event); });
-	seekslider.addEventListener("mouseup",function(){ seeking=false; });
-	// Functions
-	function playPause(){
-		if(audio.paused){
-		    audio.play();
-	    } else {
-		    audio.pause();
-	    }
-	}
-	function seek(event){
-	    if(seeking){
-		    seekslider.value = event.clientX - seekslider.offsetLeft;
-	        seekto = audio.duration * (seekslider.value / 100);
-	        audio.currentTime = seekto;
-	    }
-    }
-}*/
 (function($, window, document, undefined) {
     var isTouch = 'ontouchstart' in window,
         eStart = isTouch ? 'touchstart' : 'mousedown',

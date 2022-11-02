@@ -239,6 +239,30 @@ p
     opacity: 0;
     transition: 0.3s;
 }
+#title
+{
+    margin: 0%;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    filter: invert(1);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+
+}
+#artist
+{
+    margin: 0%;
+    visibility: hidden;
+    opacity: 0%;
+    position: absolute;
+    filter: invert(1);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: 0.3s;
+}
+
 #play
 {
     transition: transform.2s;
@@ -254,6 +278,34 @@ p
 {
     transform: scale(.8);
 }
+#previous
+{
+    visibility: hidden;
+    opacity: 0;
+    transition: transform.2s;
+    left: 25%;
+    position: absolute;
+    filter: invert(1);
+    transition: 0.3s;
+}
+#previous:active
+{
+    transform: scale(.8);
+}
+#next
+{
+    visibility: hidden;
+    opacity: 0;
+    transition: transform.2s;
+    right: 25%;
+    position: absolute;
+    filter: invert(1);
+    transition: 0.3s;
+}
+#next:active
+{
+    transform: scale(.8);
+}
 #duration
 {
     visibility: hidden;
@@ -262,7 +314,7 @@ p
     left: 50%;
     translate: -50%;
     height: 5px;
-    width: 200px;
+    width: 50px;
     background-color: rgb(24, 24, 24);
     border-radius: 5px;
     opacity: 0;
@@ -288,4 +340,19 @@ p
     filter:invert(1);
     opacity: 50%;
     font-family: 'Work Sans', sans-serif;
+    opacity: 0;
+    transition: 0.3s;
+}
+#musicstart
+{
+    visibility: hidden;
+    position: absolute;
+    left: 5%;
+    top: 54%;
+    font-size: 12px;
+    filter:invert(1);
+    opacity: 50%;
+    font-family: 'Work Sans', sans-serif;
+    opacity: 0;
+    transition: 0.3s;
 }
