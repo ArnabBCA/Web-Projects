@@ -374,3 +374,88 @@ p
     opacity: 0;
     transition: 0.3s;
 }
+
+
+@keyframes quiet {
+    25%{
+      transform: scaleY(.6);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.8);
+    }
+  }
+  
+  @keyframes normal {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.6);
+    }
+  }
+  @keyframes loud {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(1.2);
+    }
+  }
+  #wave{
+    visibility: hidden;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    display: flex;
+    justify-content: space-between;
+    height: 15px;
+    --boxSize: 1px;
+    --gutter:4px;
+    width: calc((var(--boxSize) + var(--gutter)) * 4);
+  }
+  
+  .box{
+    transform: scaleY(.5);
+    height: 100%;
+    width: var(--boxSize);
+    background: #12E2DC;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border-radius: 8px;
+  }
+  
+  .box1{
+    animation-name: quiet;
+  }
+  
+  .box2{
+    animation-name: normal;
+  }
+  
+  .box3{
+    animation-name: quiet;
+  }
+  
+  .box4{
+    animation-name: loud;
+  }
+  
+  .box5{
+    animation-name: quiet;
+  }
+  
+  .box6{
+    animation-name: normal;
+  }
+
+

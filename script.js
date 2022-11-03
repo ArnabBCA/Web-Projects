@@ -34,7 +34,6 @@ function myDate()
     month[10] = "November";
     month[11] = "December";
     
-    
     days[0] = "Sunday";
     days[1] = "Monday";
     days[2] = "Tuesday";
@@ -46,7 +45,6 @@ function myDate()
     var d=(a.getDate());
     var day = days[a.getDay()];
     document.getElementById("month").innerHTML=day+", "+m+" "+d;
-
 }
 
 function showdiv()
@@ -186,6 +184,7 @@ function play()
     {
         displayImage.src='Icons/pause-fill.svg';
         document.getElementById('music').play();
+        document.getElementById("wave").style.visibility='visible';
         
         music.ontimeupdate=function(e)
         {
@@ -201,23 +200,21 @@ function play()
             var m = parseInt((music.currentTime / 60) % 60);
             document.getElementById("musicstart").innerHTML = (m+":"+s);
             
-
-
             var progress=document.getElementById('progress');
-            progress.style.width=Math.floor(music.currentTime*100/music.duration)+"%";
-            
+            progress.style.width=Math.floor(music.currentTime*100/music.duration)+"%";     
         }
         musicon=1;
     }
     else
     {
+        document.getElementById("wave").style.visibility='hidden';
+        
         displayImage.src='Icons/play-fill.svg';
         document.getElementById("music").pause();
+
         musicon=0;
     }
 }
-
-
 
 function musicstatus()
 {
@@ -225,8 +222,7 @@ function musicstatus()
     {
         document.getElementById("dynamic").style.height='26px';
         document.getElementById("dynamic").style.width='150px';
-
-
+        
         document.getElementById("poster").style.visibility='visible';
         document.getElementById("poster").style.height='21px';
         document.getElementById("poster").style.width='21px';
@@ -234,8 +230,7 @@ function musicstatus()
         document.getElementById("poster").style.borderRadius='7px';
         document.getElementById("poster").style.top='10%';
 
-        document.getElementById("duration").style.width='30px';
-        
+        document.getElementById("duration").style.width='30px';     
     }
     else if(musicon==0)
     {
@@ -243,6 +238,7 @@ function musicstatus()
         document.getElementById("dynamic").style.width='90px';
         document.getElementById("duration").style.width='30px';
 
+        document.getElementById("wave").style.visibility='hidden';
     }
 }
 
@@ -282,3 +278,5 @@ function invertcamera()
             var audioElement = document.createElement('music');
         };
 });
+
+
