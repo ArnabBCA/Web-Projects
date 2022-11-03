@@ -52,11 +52,13 @@ function myDate()
 function showdiv()
 {
     document.getElementById("message").style.visibility="visible";
+    document.getElementById("message").style.opacity='1';
 }
 setTimeout("showdiv()",10000)
 function insta()
 {
     document.getElementById("instagram").style.visibility="visible";
+    document.getElementById("instagram").style.opacity='1';
 }
 setTimeout("insta()",20000)
 function clear()
@@ -85,23 +87,23 @@ window.addEventListener("click", function(e)
 {
     if (document.getElementById('dynamic').contains(e.target))
     {
-        document.getElementById("dynamic").style.height='170px';
-        document.getElementById("dynamic").style.width='317px';
+        document.getElementById("dynamic").style.height='150px';
+        document.getElementById("dynamic").style.width='275px';
         document.getElementById("dynamic").style.borderRadius='35px';
         document.getElementById("dynamic").style.boxShadow='rgba(0, 0, 0, 0.4) 0px 30px 90px';
 
         document.getElementById("poster").style.visibility='visible';
         document.getElementById("poster").style.opacity='1';
-        document.getElementById("poster").style.height='75px';
-        document.getElementById("poster").style.width='75px';
-        document.getElementById("poster").style.borderRadius='25px';
-        document.getElementById("poster").style.left='3%';
-        document.getElementById("poster").style.top='6%';
+        document.getElementById("poster").style.height='64px';
+        document.getElementById("poster").style.width='64px';
+        document.getElementById("poster").style.borderRadius='24px';
+        document.getElementById("poster").style.left='3.5%';
+        document.getElementById("poster").style.top='6.5%';
 
         document.getElementById("title").style.visibility='visible';
         document.getElementById("title").style.opacity='1';
         document.getElementById("title").style.left='30%';
-        document.getElementById("title").style.top='16%';
+        document.getElementById("title").style.top='14%';
 
         document.getElementById("artist").style.visibility='visible';
         document.getElementById("artist").style.opacity='60%';
@@ -110,23 +112,23 @@ window.addEventListener("click", function(e)
 
         document.getElementById("duration").style.visibility='visible';
         document.getElementById("duration").style.opacity='1';
-        document.getElementById("duration").style.width='200px';
+        document.getElementById("duration").style.width='180px';
         document.getElementById("progress").style.visibility='visible';
         document.getElementById("progress").style.opacity='1';
         
         document.getElementById("play").style.visibility='visible';
         document.getElementById("play").style.opacity='1';
         document.getElementById("play").style.top='66%';
-        document.getElementById("play").style.height='45px';
+        document.getElementById("play").style.height='43px';
 
         document.getElementById("previous").style.visibility='visible';
         document.getElementById("previous").style.opacity='1';
-        document.getElementById("previous").style.top='70%';
+        document.getElementById("previous").style.top='71%';
         document.getElementById("previous").style.height='30px';
 
         document.getElementById("next").style.visibility='visible';
         document.getElementById("next").style.opacity='1';
-        document.getElementById("next").style.top='70%';
+        document.getElementById("next").style.top='71%';
         document.getElementById("next").style.height='30px';
 
         document.getElementById("musiclength").style.visibility='visible';
@@ -147,8 +149,8 @@ window.addEventListener("click", function(e)
         document.getElementById("next").style.opacity='0';
 
         document.getElementById("poster").style.visibility='hidden';
-        document.getElementById("poster").style.height='25px';
-        document.getElementById("poster").style.width='25px';
+        document.getElementById("poster").style.height='20px';
+        document.getElementById("poster").style.width='20px';
         document.getElementById("poster").style.opacity='0';
 
         document.getElementById("title").style.visibility='hidden';
@@ -159,7 +161,7 @@ window.addEventListener("click", function(e)
 
         document.getElementById("duration").style.visibility='hidden';
         document.getElementById("duration").style.opacity='0';
-        document.getElementById("duration").style.width='200px';
+        document.getElementById("duration").style.width='180px';
 
         document.getElementById("progress").style.visibility='hidden';
         document.getElementById("progress").style.opacity='0';
@@ -221,24 +223,24 @@ function musicstatus()
 {
     if(musicon==1)
     {
-        document.getElementById("dynamic").style.height='30px';
-        document.getElementById("dynamic").style.width='170px';
+        document.getElementById("dynamic").style.height='26px';
+        document.getElementById("dynamic").style.width='150px';
 
 
         document.getElementById("poster").style.visibility='visible';
-        document.getElementById("poster").style.height='25px';
-        document.getElementById("poster").style.width='25px';
+        document.getElementById("poster").style.height='21px';
+        document.getElementById("poster").style.width='21px';
         document.getElementById("poster").style.opacity='1';
-        document.getElementById("poster").style.borderRadius='10px';
-        document.getElementById("poster").style.top='7%';
+        document.getElementById("poster").style.borderRadius='7px';
+        document.getElementById("poster").style.top='10%';
 
         document.getElementById("duration").style.width='30px';
         
     }
     else if(musicon==0)
     {
-        document.getElementById("dynamic").style.height='30px';
-        document.getElementById("dynamic").style.width='100px';
+        document.getElementById("dynamic").style.height='26px';
+        document.getElementById("dynamic").style.width='90px';
         document.getElementById("duration").style.width='30px';
 
     }

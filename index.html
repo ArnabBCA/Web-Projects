@@ -20,7 +20,7 @@
             <p1>airtel</p1>
         </div>
         <div id="top-icons">
-            <img src="Icons/Untitled (1).svg" height="16px">
+            <img src="Icons/Untitled (1).svg" height="14px">
         </div>
         <div id="flash" onclick="invertflash()">
             <img src="Icons/flashlight.svg" height="40px">
@@ -31,28 +31,6 @@
         <div id="bar-icon"></div>
         <div id="month"></div>
         <div id="clock"></div>
-        <div id="dynamic" class="dynamic" tabindex="-1">
-            <audio preload="auto" id="music">
-                <source src="Music/[YT2mp3.info] - NEFFEX - Grateful [Copyright Free] No.54 (320kbps).mp3">
-            </audio>
-            <div id="duration">
-                <div id="progress"></div>
-            </div>
-            <script>
-                duration.onclick=function(e)
-                {
-                    music.currentTime=((e.offsetX/200)*music.duration);
-                }
-            </script>
-            <div id="musicstart"></div>
-            <div id="musiclength"></div>
-            <img src="Icons/Grateful.jpeg" id="poster" class= "poster" height="16px" width="16px">
-            <h1 id="title">GRATEFUL</h1>
-            <h4 id="artist">Neffex</h4>
-            <img src="Icons/play-fill.svg" id="play"  onclick="play()"height="16px">
-            <img src="Icons/rewind-fill.svg" id="previous" height="16px">
-            <img src="Icons/fast-forward-fill.svg" id="next" height="16px">
-        </div>
         <div Id="message">
             <p1>Messages</p1>
             <p>Made By @Arnab Ghosh </p>
@@ -63,6 +41,28 @@
         </div>
         <div Id="clear" onclick="messageclear()">
             <p3>Clear</p3>
+        </div>
+        <div id="dynamic" class="dynamic" tabindex="-1">
+            <audio preload="metadata" id="music">
+                <source src="Music/[YT2mp3.info] - NEFFEX - Grateful [Copyright Free] No.54 (320kbps).mp3">
+            </audio>
+            <div id="duration">
+                <div id="progress"></div>
+            </div>
+            <script>
+                duration.onclick=function(e)
+                {
+                    music.currentTime=((e.offsetX/180)*music.duration);
+                }
+            </script>
+            <div id="musicstart"></div>
+            <div id="musiclength"></div>
+            <img src="Icons/Grateful.jpeg" id="poster" class= "poster" height="16px" width="16px">
+            <h1 id="title">GRATEFUL</h1>
+            <h4 id="artist">Neffex</h4>
+            <img src="Icons/play-fill.svg" id="play"  onclick="play()"height="16px">
+            <img src="Icons/rewind-fill.svg" id="previous" height="16px">
+            <img src="Icons/fast-forward-fill.svg" id="next" height="16px">
         </div>
     </div>
 
