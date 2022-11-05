@@ -39,7 +39,8 @@ function myDate()
     days[2] = "Tuesday";
     days[3] = "Wednesday";
     days[4] = "Thursday";
-    days[5] = "Saturday";
+    days[5] = "Friday";
+    days[6] = "Saturday";
     
     var m = month[a.getMonth()];
     var d=(a.getDate());
